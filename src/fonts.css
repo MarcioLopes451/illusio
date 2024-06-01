@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'Bank Gothic';
+    src: url('./fonts/Bank\ Gothic\ Medium.ttf') format('truetype'),
+         url('./fonts/Bank\ Gothic\ Medium.otf') format('opentype');
+    font-weight: medium;
+    font-style: normal;
+}
