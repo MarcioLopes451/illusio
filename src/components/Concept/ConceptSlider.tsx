@@ -6,7 +6,7 @@ type ImgProps = {
   slides: string[];
 };
 
-export default function ImgSlider({ slides }: ImgProps) {
+export default function ConceptSlider({ slides }: ImgProps) {
   const [imgIndex, setImgIndex] = useState<number>(0);
   return (
     <div className="mt-5">
@@ -16,7 +16,7 @@ export default function ImgSlider({ slides }: ImgProps) {
             src={images}
             key={images}
             style={{ translate: `${-100 * imgIndex}%` }}
-            className="img-slider-img"
+            className="img-slider-img2"
           />
         ))}
       </div>
