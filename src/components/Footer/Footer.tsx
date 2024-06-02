@@ -1,4 +1,3 @@
-import React from "react";
 import Logo from "../../images/illusioLogo.png";
 import Instagram from "../../images/1298747_instagram_brand_logo_social media_icon.png";
 import X from "../../images/11244080_x_twitter_elon musk_twitter new logo_icon (1).png";
