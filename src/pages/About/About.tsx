@@ -1,5 +1,5 @@
 import Concept from "../../components/Concept/Concept";
-import HeaderSection from "../../components/HeaderSection";
+import HeaderSection from "../../components/Header/HeaderSection";
 import OurHistory from "../../components/OurHistory/OurHistory";
 import CEOImg from "../../images/WhatsApp Image 2024-05-22 at 15.35.52.jpeg";
 import CEOImg2 from "../../images/WhatsApp Image 2024-05-24 at 11.46.05.jpeg";

@@ -1,4 +1,4 @@
-import Header from "../images/AdobeStock_543034790 1.png";
+import Header from "../../images/AdobeStock_543034790 1.png";
 
 type HeaderProps = {
   title: string;

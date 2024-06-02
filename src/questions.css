@@ -1,0 +1,26 @@
+.question-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.arrow {
+    font-size: 18px;
+    transition: transform 0.3s ease; 
+}
+
+.arrow.up {
+    transform: rotate(180deg); 
+}
+
+.answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease; 
+}
+
+.answer.open {
+    max-height: 100px; 
+}
