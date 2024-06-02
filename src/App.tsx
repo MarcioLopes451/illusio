@@ -4,6 +4,8 @@ import { Route, Routes } from "react-router-dom";
 import HomePage from "./pages/Home/HomePage";
 import Footer from "./components/Footer/Footer";
 import About from "./pages/About/About";
+import Services from "./pages/Services/Services";
+import Contact from "./pages/Contact/Contact";
 function App() {
   return (
     <>
@@ -12,6 +14,8 @@ function App() {
         <Routes>
           <Route path="/illusio/" element={<HomePage />} />
           <Route path="/illusio/aboutus" element={<About />} />
+          <Route path="/illusio/services" element={<Services />} />
+          <Route path="/illusio/contact" element={<Contact />} />
         </Routes>
         <Footer />
       </div>
