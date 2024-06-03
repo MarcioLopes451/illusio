@@ -77,9 +77,9 @@ export default function Contact() {
           <iframe
             width="100%"
             height="308"
-            src="https://maps.google.com/maps?width=100%25&amp;height=308&amp;hl=en&amp;q=Innovation%20Park,%20University%20of,%20Triumph%20Rd,%20Nottingham%20NG7%202TU+(illusio)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+            src="https://maps.google.com/maps?width=100%25&amp;height=308&amp;hl=en&amp;q=71-75%20Shelton%20Street,%20Covent%20Garden,%20London,%20WC2H%209JQ+(illusio)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
           >
-            <a href="https://www.gps.ie/">gps tracker sport</a>
+            <a href="https://www.gps.ie/">gps vehicle tracker</a>
           </iframe>
         </div>
 
