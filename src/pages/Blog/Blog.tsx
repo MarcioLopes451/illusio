@@ -1,6 +1,8 @@
 import { useState } from "react";
 import HeaderSection from "../../components/Header/HeaderSection";
 import { PostData } from "../../data/PostData";
+import { Link } from "react-router-dom";
+import RightArrow from "../../images/4829869_arrow_next_right_icon.png";
 
 export default function Blog() {
   const [post, setPost] = useState<string>("");
@@ -41,22 +43,36 @@ export default function Blog() {
         </div>
         <div className="mt-10">
           {filteredPosts.map((p) => (
-            <div key={p.id} className="border border-white rounded-[4px]">
+            <div key={p.id} className="border border-white rounded-[4px] pb-5">
               <img src={p.img} className="w-[317px] h-[259px] object-cover" />
-              <div className="flex justify-between items-center mt-3 px-1">
+              <div className="flex justify-between items-center mt-3 text-[13px] px-[15px]">
                 <p>{p.date}</p>
                 <p>{p.Author}</p>
               </div>
-              <h3 className="font-semibold text-lg">{p.title}</h3>
-              <p>
-                {p.firstParagraph.slice(
-                  0,
-                  p.firstParagraph.indexOf(
-                    ".",
-                    p.firstParagraph.indexOf(".") * 7
-                  )
-                )}
-              </p>
+              <div className="flex justify-center items-center mt-3 px-[15px] flex-col pb-5 gap-5">
+                <h3 className="font-semibold text-[16px]">{p.title}</h3>
+                <p className="text-[14px]">
+                  {p.firstParagraph.slice(
+                    0,
+                    p.firstParagraph.indexOf(
+                      ".",
+                      p.firstParagraph.indexOf(".") * 7
+                    )
+                  )}
+                </p>
+              </div>
+              <Link
+                to={`/illusio/blog/${p.id}`}
+                key={p.id}
+                onClick={() =>
+                  window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
+                }
+              >
+                <button className="flex justify-between items-center w-[166px] h-[40px] border border-white mx-[15px] p-[10px] rounded">
+                  <p>Read More</p>
+                  <img src={RightArrow} />
+                </button>
+              </Link>
               {/* Add more post details as needed */}
             </div>
           ))}

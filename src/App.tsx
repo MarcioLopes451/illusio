@@ -7,6 +7,7 @@ import About from "./pages/About/About";
 import Services from "./pages/Services/Services";
 import Contact from "./pages/Contact/Contact";
 import Blog from "./pages/Blog/Blog";
+import BlogPost from "./pages/Blog/BlogPost";
 function App() {
   return (
     <>
@@ -17,6 +18,7 @@ function App() {
           <Route path="/illusio/aboutus" element={<About />} />
           <Route path="/illusio/services" element={<Services />} />
           <Route path="/illusio/blog" element={<Blog />} />
+          <Route path="/illusio/blog/:id" element={<BlogPost />} />
           <Route path="/illusio/contact" element={<Contact />} />
         </Routes>
         <Footer />
