@@ -2,7 +2,7 @@ export const PostData = [
   {
     id: 1,
     img: sds,
-    Author: "Henrique Fernandes",
+    Author: "~ Henrique Fernandes",
     date: "1st June, 2024",
     title:
       "consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
