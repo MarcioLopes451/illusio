@@ -29,12 +29,12 @@ export default function BlogPost() {
   return (
     <>
       <HeaderSection title="Blog Post" />
-      <section className="mt-10 px-[32px] text-center">
+      <section className="mt-10 px-[32px] text-center md:px-[50px]">
         <div className="flex justify-center items-center flex-col gap-10">
           <h2 className="font-BankGothic text-xl">{postData.title}</h2>
           <img
             src={postData.img}
-            className="w-[310px] h-[225px] object-cover"
+            className="w-full h-[225px] object-cover md:h-[450px]"
           />
         </div>
         <div className="flex justify-between items-center mt-5">
@@ -50,6 +50,8 @@ export default function BlogPost() {
             {postData.Quote}
           </p>
           <p>{postData.secondParagraph}</p>
+        </div>
+        <div className="flex justify-center items-center flex-col gap-10 md:flex-row mt-10">
           <h2 className="flex font-medium">
             Tags:
             {postData.Tags.map((tag) => (
@@ -58,14 +60,15 @@ export default function BlogPost() {
               </p>
             ))}
           </h2>
-        </div>
-        <div className="mt-10 flex justify-center gap-6 items-center">
-          <p>Share:</p>
-          <div className="flex justify-center items-center gap-5 ">
-            <img src={Instagram} className="w-[30px]" />
-            <img src={X} className="w-[30px]" />
-            <img src={Facebook} className="w-[30px]" />
-            <img src={Linkedin} className="w-[35px]" />
+
+          <div className="flex justify-center gap-6 items-center">
+            <p>Share:</p>
+            <div className="flex justify-center items-center gap-5 ">
+              <img src={Instagram} className="w-[30px]" />
+              <img src={X} className="w-[30px]" />
+              <img src={Facebook} className="w-[30px]" />
+              <img src={Linkedin} className="w-[35px]" />
+            </div>
           </div>
         </div>
       </section>

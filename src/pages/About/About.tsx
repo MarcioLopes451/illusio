@@ -9,25 +9,27 @@ export default function About() {
     <>
       <HeaderSection title="About Us" />
       <OurHistory />
-      <div className="mt-5 px-[32px] font-Inter">
+      <div className="mt-5 px-[32px] font-Inter md:px-[50px]">
         {/* CEO Section */}
 
-        <div className="flex justify-between items-center">
-          <hr className="w-[47px] h-[1px] bg-gray-100 border-0 rounded" />
-          <h2 className="font-BankGothic text-[20px]">Presenting Our Team</h2>
+        <div className="flex items-center">
+          <hr className="flex-grow h-[1px] bg-gray-100 border-0 rounded" />
+          <h2 className="font-BankGothic text-[20px] whitespace-nowrap ml-4">
+            Presenting Our Team
+          </h2>
         </div>
         <div className="mt-5 flex justify-center items-center flex-col">
           <div className="mt-5 flex justify-center items-center flex-col gap-5">
             <img
               src={CEOImg}
-              className="object-cover w-[311px] h-[361px] rounded-lg"
+              className="object-cover w-[311px] h-[361px] rounded-lg md:w-[360px] md:h-[360px]"
             />
             <h3 className="text-[20px]">Henrique Fernandes</h3>
             <h3 className="text-[16px] opacity-60 font-light">CEO & Founder</h3>
           </div>
-          <div className="mt-5 flex justify-center items-center flex-col gap-5 text-center">
-            <h3>Our CEO's backstory</h3>
-            <p>
+          <div className="mt-5 flex justify-center items-center flex-col gap-5 text-center md:mt-[75px]">
+            <h3 className="text-[18px] md:text-[20px]">Our CEO's backstory</h3>
+            <p className="text-[16px] font-light md:text-[18px]">
               Henrique has been in the engineering field for nearly a decade.
               With both academic research and real-world engineering experience
               in his repertoire. He was born in Brazil but has traveled to
@@ -36,7 +38,10 @@ export default function About() {
               where he is implementing his passion for filmmaking and
               engineering to illusio’s Hologram experiences.
             </p>
-            <img src={CEOImg2} className="object-cover w-[313px] h-[199px]" />
+            <img
+              src={CEOImg2}
+              className="object-cover w-[313px] h-[199px] md:w-full md:h-[390px]"
+            />
           </div>
         </div>
       </div>
@@ -44,9 +49,11 @@ export default function About() {
       {/* Concept Section */}
 
       <div className="mt-5">
-        <div className="flex justify-between items-center px-[32px]">
-          <h2 className="font-BankGothic text-[20px]">Concept Event</h2>
-          <hr className="w-[118px] h-[1px] bg-gray-100 border-0 rounded" />
+        <div className="flex items-center px-[32px] md:px-[50px]">
+          <h2 className="font-BankGothic text-[20px] whitespace-nowrap mr-4">
+            Concept Event
+          </h2>
+          <hr className="flex-grow h-[1px] bg-gray-100 border-0 rounded" />
         </div>
         <Concept />
       </div>
