@@ -12,9 +12,9 @@ export default function Footer() {
 
   return (
     <div className="bg-[#141619] pt-10 font-Inter">
-      <div className="flex justify-center items-center flex-col gap-5">
-        <img src={Logo} className="w-[100px]" />
-        <div className="flex justify-center items-center flex-col gap-5">
+      <div className="flex justify-center items-center flex-col gap-5 md:gap-[60px]">
+        <img src={Logo} className="w-[100px] md:w-[150px]" />
+        <div className="flex justify-center items-center flex-col gap-5 md:flex-row md:gap-[50px]">
           <Link to="/illusio/" onClick={scrollUp}>
             Home
           </Link>
