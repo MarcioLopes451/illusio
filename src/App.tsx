@@ -11,17 +11,21 @@ import BlogPost from "./pages/Blog/BlogPost";
 function App() {
   return (
     <>
-      <div className="text-white ">
-        <Navbar />
-        <Routes>
-          <Route path="/illusio/" element={<HomePage />} />
-          <Route path="/illusio/aboutus" element={<About />} />
-          <Route path="/illusio/services" element={<Services />} />
-          <Route path="/illusio/blog" element={<Blog />} />
-          <Route path="/illusio/blog/:id" element={<BlogPost />} />
-          <Route path="/illusio/contact" element={<Contact />} />
-        </Routes>
-        <Footer />
+      <div className="text-white bg-[#141619]">
+        <div>
+          <Navbar />
+        </div>
+        <div className="pt-[100px]">
+          <Routes>
+            <Route path="/illusio/" element={<HomePage />} />
+            <Route path="/illusio/aboutus" element={<About />} />
+            <Route path="/illusio/services" element={<Services />} />
+            <Route path="/illusio/blog" element={<Blog />} />
+            <Route path="/illusio/blog/:id" element={<BlogPost />} />
+            <Route path="/illusio/contact" element={<Contact />} />
+          </Routes>
+          <Footer />
+        </div>
       </div>
     </>
   );

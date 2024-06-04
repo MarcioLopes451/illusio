@@ -10,28 +10,36 @@ export default function Services() {
   return (
     <>
       <HeaderSection title="Services" />
-      <section className="mt-10 px-[32px] font-Inter">
-        <div className="flex justify-between items-center">
-          <h2 className="font-BankGothic text-[20px]">What We Offer</h2>
-          <hr className="w-[125px] h-[1px] bg-gray-100 border-0 rounded" />
+      <section className="mt-10 px-[32px] font-Inter md:px-[50px]">
+        <div className="flex items-center">
+          <h2 className="font-BankGothic text-[20px] whitespace-nowrap mr-4">
+            What We Offer
+          </h2>
+          <hr className="flex-grow h-[1px] bg-gray-100 border-0 rounded" />
         </div>
 
         {/* Hologram Section */}
         <div className="mt-5 text-center flex flex-col justify-center items-center gap-5">
-          <h2 className="font-BankGothic text-[18px]">Hologram Tents</h2>
-          <p>
+          <h2 className="font-BankGothic text-[18px] md:text-[24px]">
+            Hologram Tents
+          </h2>
+          <p className="text-[16px] md:text-[18px]">
             Our hologram tents deliver an unparalleled experience, transporting
             you to fantastical realms. Each Pavilion provides a complete
             blackout environment, ensuring full immersion in our hologram films.
           </p>
-          <img src={HologramTent1} />
-          <p>
+          <img
+            src={HologramTent1}
+            className="w-full object-cover md:h-[376px]"
+          />
+          <p className="text-[16px] md:text-[18px]">
             Crafted with original stories tailored exclusively for our hologram
             tents, illusio offers a unique and captivating adventure every time.
             Dive into a world of storytelling like never before with illusio’s
             Hologram Tents.
           </p>
         </div>
+        {/* Hologram 2nd Section */}
         <div className="mt-5 text-center flex flex-col justify-center items-center gap-5">
           <div className="mt-5 text-center flex flex-col justify-center items-center gap-[62px]">
             <img src={HologramTent2} />
@@ -54,7 +62,9 @@ export default function Services() {
 
         {/* Featured Galleries */}
         <div className="mt-10 text-center">
-          <p className="font-BankGothic">Featued Galleries</p>
+          <p className="font-BankGothic text-[18px] md:text-[24px]">
+            Featued Galleries
+          </p>
           <div className="mt-10 flex justify-center items-center flex-col gap-[50px]">
             <img src={HologramTent4} />
             <img src={HologramTent5} />

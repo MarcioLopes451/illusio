@@ -7,13 +7,15 @@ const HistoryList = [Img1, Img3, Img2];
 
 export default function OurHistory() {
   return (
-    <section className="mt-10 px-[32px]">
-      <div className="flex justify-between items-center">
-        <h2 className="font-BankGothic text-[20px]">Our History</h2>
-        <hr className="w-[156px] h-[1px] bg-gray-100 border-0 rounded" />
+    <section className="mt-10 px-[32px] md:px-[50px]">
+      <div className="flex items-center">
+        <h2 className="font-BankGothic text-[20px] whitespace-nowrap mr-4">
+          Our History
+        </h2>
+        <hr className="flex-grow h-[1px] bg-gray-100 border-0 rounded" />
       </div>
       <div className="mt-10 flex justify-center items-center flex-col text-center">
-        <p className="text-[16px] font-light font-Inter">
+        <p className="text-[16px] font-light font-Inter md:text-[18px]">
           illusio starts like any other company, with one vision. A vision that,
           at heart, combines art and technology into a transcendental
           experience. When John Henry Pepper created the Pepper’s ghost illusion

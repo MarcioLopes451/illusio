@@ -12,7 +12,7 @@ export default function FrequentQuestionsList() {
   };
 
   return (
-    <div className="mt-10 flex justify-center items-center flex-col gap-5">
+    <div className="mt-10 flex justify-center items-center flex-col gap-5 md:items-start">
       {QuestionsData.map((question) => (
         <div key={question.id}>
           <div
@@ -23,7 +23,7 @@ export default function FrequentQuestionsList() {
                 activeQuestion === question.id ? "" : "1px solid white",
             }}
           >
-            <p className="font-bold text-base w-[250px]">{question.question}</p>
+            <p className="font-bold text-base">{question.question}</p>
             <span className={`arrow ${open === question.id ? "up" : "down"}`}>
               &#9660;
             </span>
