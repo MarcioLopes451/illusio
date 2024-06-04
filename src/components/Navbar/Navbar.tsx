@@ -12,7 +12,7 @@ export default function Navbar() {
   };
 
   return (
-    <div className="w-full h-[100px] bg-black fixed z-10">
+    <div className="w-full h-[100px] bg-black fixed top-0 z-10">
       <div className="flex justify-between items-center px-8 pt-6 md:px-[50px]">
         <Link to="/illusio/">
           <img src={Logo} alt="logo" className="w-[100px] bg-cover" />

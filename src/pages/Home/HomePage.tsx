@@ -9,7 +9,7 @@ export default function HomePage() {
       {/* Hero Section */}
 
       <div className="w-full flex justify-center items-start text-center relative overflow-hidden">
-        <div className="relative w-full h-[300px] md:h-[353px] ">
+        <div className="relative w-full h-[300px] md:h-[353px]">
           <video
             loop
             autoPlay

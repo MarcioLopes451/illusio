@@ -4,9 +4,11 @@ import FrequentQuestionsList from "./FrequentQuestionsList";
 export default function FrequentQuestions() {
   return (
     <div className="mt-10">
-      <div className="flex justify-between items-center">
-        <hr className="w-[63px] h-[1px] bg-gray-100 border-0 rounded" />
-        <h2 className="font-BankGothic text-[20px]">Frequent Questions</h2>
+      <div className="flex items-center">
+        <hr className="flex-grow h-[1px] bg-gray-100 border-0 rounded" />
+        <h2 className="font-BankGothic text-[20px] whitespace-nowrap ml-4">
+          Frequent Questions
+        </h2>
       </div>
       <div className="mt-10 flex justify-center items-center gap-5 flex-col">
         <img src={FrequentQuestionImg} />
