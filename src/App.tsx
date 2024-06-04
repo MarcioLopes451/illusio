@@ -11,7 +11,7 @@ import BlogPost from "./pages/Blog/BlogPost";
 function App() {
   return (
     <>
-      <div className="text-white bg-[#141619]">
+      <div className="text-white ">
         <Navbar />
         <Routes>
           <Route path="/illusio/" element={<HomePage />} />
