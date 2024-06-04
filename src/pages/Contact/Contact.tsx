@@ -67,9 +67,11 @@ export default function Contact() {
     <>
       <HeaderSection title="Contact Us" />
       <section className="mt-10 font-Inter">
-        <div className="flex justify-between items-center px-[32px]">
-          <h2 className="font-BankGothic text-[20px]">Contact Us Today</h2>
-          <hr className="w-[100px] h-[1px] bg-gray-100 border-0 rounded" />
+        <div className="flex items-center px-[32px] md:px-[50px]">
+          <h2 className="font-BankGothic text-[20px] whitespace-nowrap mr-4">
+            Contact Us Today
+          </h2>
+          <hr className="flex-grow h-[1px] bg-gray-100 border-0 rounded" />
         </div>
 
         {/* Office map */}
@@ -89,9 +91,8 @@ export default function Contact() {
             Contact Form
           </h3>
           <div className="flex justify-center items-center flex-col pb-5">
-            <div className="flex justify-center items-center flex-col py-5 md:flex-row">
+            <div className="flex justify-center items-center flex-col py-5 md:flex-row md:flex-wrap gap-6">
               <div>
-                <br />
                 <input
                   type="text"
                   value={firstName}
@@ -100,9 +101,7 @@ export default function Contact() {
                   placeholder="Name*"
                 />
               </div>
-              <br />
               <div>
-                <br />
                 <input
                   type="text"
                   value={email}
@@ -112,7 +111,6 @@ export default function Contact() {
                 />
               </div>
               <div>
-                <br />
                 <input
                   type="tel"
                   value={phone}
@@ -121,32 +119,29 @@ export default function Contact() {
                   placeholder="Phone*"
                 />
               </div>
-            </div>
-            <div className="flex justify-center items-center flex-col gap-10 py-5">
               <div>
-                <br />
                 <input
                   type="text"
                   value={subject}
                   onChange={(e) => setSubject(e.target.value)}
-                  className="border-white border-[3px] w-[300px] h-[48px] mt-5 rounded-lg bg-transparent md:w-[620px] pl-3"
+                  className="border-white border-[3px] w-[300px] h-[48px] mt-5 rounded-lg bg-transparent pl-3"
                   placeholder="Subject*"
                 />
               </div>
-              <div>
-                <br />
+            </div>
+            <div className="flex justify-center items-center flex-col gap-10 py-5">
+              <div className="mx-[32px] md:mx-[40px]">
                 <textarea
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  className="border-white border-[3px] h-[341px] mt-5 rounded-lg bg-transparent p-3 w-[307px]"
+                  className="border-white border-[3px] h-[341px] mt-5 rounded-lg bg-transparent p-3 w-full "
                   placeholder="Message*"
                   cols={cols}
                 ></textarea>
               </div>
             </div>
             <button
-              className="w-[333px] h-[84px] bg-[#015A92] text-white px-[25px] py-[15px] font-semibold font-Roboto text-center rounded-md 
-                md:px-[30px]"
+              className="w-full h-[84px] bg-[#015A92] text-white px-[25px] py-[15px] font-semibold font-Roboto text-center rounded-md"
               onClick={nameValidation}
             >
               Send Message
@@ -166,9 +161,7 @@ export default function Contact() {
           <div className="text-center flex justify-center items-start flex-col gap-5">
             <div className="text-center flex justify-center items-center flex-row gap-5">
               <img src={LocationImg} />
-              <p>
-                Innovation Park, University of, Triumph Rd, Nottingham NG7 2TU
-              </p>
+              <p>71-75 Shelton Street, Covent Garden, London, WC2H 9JQ</p>
             </div>
             <div className="text-center flex justify-center items-center flex-row gap-5">
               <img src={PhoneImg} />

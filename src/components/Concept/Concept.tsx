@@ -11,7 +11,7 @@ export default function Concept() {
   return (
     <div>
       <ConceptSlider slides={slides} />
-      <div className="bg-[#015A92] -mt-10 pt-14 pb-6 px-[32px] font-Inter font-light text-center">
+      <div className="bg-[#015A92] -mt-10 pt-14 pb-6 px-[32px] font-Inter font-light text-center md:px-[50px]">
         <p>
           The wonder event was the first time where the hologram was displayed
           to the general public. With an audience of 5,000 people, illusio's
