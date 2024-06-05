@@ -28,7 +28,11 @@ export default function FrequentQuestionsList() {
               &#9660;
             </span>
           </div>
-          <div className={`answer ${open === question.id ? "open" : ""}`}>
+          <div
+            className={`answer ${
+              open === question.id ? "open" : ""
+            } w-full md:w-[700px]`}
+          >
             <p className="px-[10px]">{question.answer}</p>
           </div>
         </div>
