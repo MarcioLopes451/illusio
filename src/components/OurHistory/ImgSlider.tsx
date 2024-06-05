@@ -32,14 +32,17 @@ export default function ImgSlider({ slides }: ImgProps) {
 
   return (
     <div className="mt-10">
-      <div className="w-full h-full flex overflow-hidden items-center">
+      <div className="w-full h-full flex overflow-hidden items-center md:gap-[20px]">
         {slides.map((images) => (
           <img
             src={images}
             key={images}
             style={{
               translate: `${-imgIndex * (100 / imagesToShow)}%`,
-              width: `${100 / imagesToShow}%`,
+              width:
+                window.innerWidth >= 768 && window.innerWidth < 1024
+                  ? "calc((100% / 2) - 10px)"
+                  : `${90 / imagesToShow}% `,
             }}
             className="img-slider-img"
           />

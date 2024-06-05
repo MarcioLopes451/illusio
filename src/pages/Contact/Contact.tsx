@@ -67,7 +67,7 @@ export default function Contact() {
     <>
       <HeaderSection title="Contact Us" />
       <section className="mt-10 font-Inter">
-        <div className="flex items-center px-[32px] md:px-[50px]">
+        <div className="flex items-center px-[32px] md:px-[50px] lg:px-[110px]">
           <h2 className="font-BankGothic text-[20px] whitespace-nowrap mr-4">
             Contact Us Today
           </h2>
@@ -86,90 +86,99 @@ export default function Contact() {
         </div>
 
         {/* Contact form */}
-        <div className="mt-10 px-[32px]">
-          <h3 className="font-Inter text-2xl text-center font-medium">
-            Contact Form
-          </h3>
-          <div className="flex justify-center items-center flex-col pb-5">
-            <div className="flex justify-center items-center flex-col py-5 md:flex-row md:flex-wrap gap-6">
-              <div>
-                <input
-                  type="text"
-                  value={firstName}
-                  onChange={(e) => setFirstName(e.target.value)}
-                  className="border-white border-[3px] w-[300px] h-[48px] mt-5 rounded-lg bg-transparent shadow-white pl-3"
-                  placeholder="Name*"
-                />
+
+        <div
+          className="flex justify-center items-center flex-col gap-10 
+        xl:flex-row xl:items-start xl:justify-between xl:gap-[50px] px-[32px] md:px-[50px] xl:px-[110px]"
+        >
+          <div className="mt-10">
+            <h3 className="font-Inter text-2xl text-center font-medium xl:text-left">
+              Contact Form
+            </h3>
+            <div className="flex justify-center items-center flex-col pb-5">
+              <div className="flex justify-center items-center flex-col py-5 md:flex-row md:flex-wrap gap-6 xl:justify-start">
+                <div>
+                  <input
+                    type="text"
+                    value={firstName}
+                    onChange={(e) => setFirstName(e.target.value)}
+                    className="border-white border-[3px] w-[300px] h-[48px] mt-5 rounded-lg bg-transparent shadow-white pl-3 xl:w-[285px]"
+                    placeholder="Name*"
+                  />
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="border-white border-[3px] w-[300px] h-[48px] mt-5 rounded-lg bg-transparent pl-3 xl:w-[285px]"
+                    placeholder="Email*"
+                  />
+                </div>
+                <div>
+                  <input
+                    type="tel"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                    className="border-white border-[3px] w-[300px] h-[48px] mt-5 rounded-lg bg-transparent pl-3 xl:w-[285px]"
+                    placeholder="Phone*"
+                  />
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    value={subject}
+                    onChange={(e) => setSubject(e.target.value)}
+                    className="border-white border-[3px] w-[300px] h-[48px] mt-5 rounded-lg bg-transparent pl-3 xl:w-[285px]"
+                    placeholder="Subject*"
+                  />
+                </div>
               </div>
-              <div>
-                <input
-                  type="text"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="border-white border-[3px] w-[300px] h-[48px] mt-5 rounded-lg bg-transparent pl-3"
-                  placeholder="Email*"
-                />
+              <div className="flex justify-center items-center flex-col gap-10 py-5">
+                <div className="mx-[32px] md:mx-[40px]">
+                  <textarea
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    className="border-white border-[3px] h-[341px] mt-5 rounded-lg bg-transparent p-3 w-full"
+                    placeholder="Message*"
+                    cols={cols}
+                  ></textarea>
+                </div>
               </div>
-              <div>
-                <input
-                  type="tel"
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
-                  className="border-white border-[3px] w-[300px] h-[48px] mt-5 rounded-lg bg-transparent pl-3"
-                  placeholder="Phone*"
-                />
-              </div>
-              <div>
-                <input
-                  type="text"
-                  value={subject}
-                  onChange={(e) => setSubject(e.target.value)}
-                  className="border-white border-[3px] w-[300px] h-[48px] mt-5 rounded-lg bg-transparent pl-3"
-                  placeholder="Subject*"
-                />
-              </div>
+              <button
+                className="w-full h-[84px] bg-[#015A92] text-white px-[25px] py-[15px] font-semibold font-Roboto text-center rounded-md"
+                onClick={nameValidation}
+              >
+                Send Message
+              </button>
             </div>
-            <div className="flex justify-center items-center flex-col gap-10 py-5">
-              <div className="mx-[32px] md:mx-[40px]">
-                <textarea
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                  className="border-white border-[3px] h-[341px] mt-5 rounded-lg bg-transparent p-3 w-full "
-                  placeholder="Message*"
-                  cols={cols}
-                ></textarea>
-              </div>
-            </div>
-            <button
-              className="w-full h-[84px] bg-[#015A92] text-white px-[25px] py-[15px] font-semibold font-Roboto text-center rounded-md"
-              onClick={nameValidation}
-            >
-              Send Message
-            </button>
           </div>
-        </div>
 
-        {/* Contact Info */}
+          {/* Contact Info */}
 
-        <div className="mt-10 px-[32px] text-center flex justify-center items-center flex-col gap-5">
-          <h3 className="font-Inter text-2xl font-medium">Contact Info</h3>
-          <p>
-            We’d love to hear from you! Please fill in your details below so we
-            can assist you promptly. Whether you have questions, feedback, or
-            need support, our team is here to help.
-          </p>
-          <div className="text-center flex justify-center items-start flex-col gap-5">
-            <div className="text-center flex justify-center items-center flex-row gap-5">
-              <img src={LocationImg} />
-              <p>71-75 Shelton Street, Covent Garden, London, WC2H 9JQ</p>
-            </div>
-            <div className="text-center flex justify-center items-center flex-row gap-5">
-              <img src={PhoneImg} />
-              <p>+44 7517439370</p>
-            </div>
-            <div className="text-center flex justify-center items-center flex-row gap-5">
-              <img src={EmailImg} />
-              <p>henriquebaena98@gmail.com</p>
+          <div
+            className="mt-10 px-[32px] text-center flex justify-center items-center flex-col gap-5 
+          xl:items-start xl:text-left xl:w-[550px] xl:px-0"
+          >
+            <h3 className="font-Inter text-2xl font-medium">Contact Info</h3>
+            <p>
+              We’d love to hear from you! Please fill in your details below so
+              we can assist you promptly. Whether you have questions, feedback,
+              or need support, our team is here to help.
+            </p>
+            <div className="text-center flex justify-center items-start flex-col gap-5">
+              <div className="text-center flex justify-center items-center flex-row gap-5">
+                <img src={LocationImg} />
+                <p>71-75 Shelton Street, Covent Garden, London, WC2H 9JQ</p>
+              </div>
+              <div className="text-center flex justify-center items-center flex-row gap-5">
+                <img src={PhoneImg} />
+                <p>+44 7517439370</p>
+              </div>
+              <div className="text-center flex justify-center items-center flex-row gap-5">
+                <img src={EmailImg} />
+                <p>henriquebaena98@gmail.com</p>
+              </div>
             </div>
           </div>
         </div>

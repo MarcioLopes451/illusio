@@ -12,9 +12,9 @@ export default function Footer() {
 
   return (
     <div className="bg-[#141619] pt-10 font-Inter">
-      <div className="flex justify-center items-center flex-col gap-5 md:gap-[60px]">
+      <div className="flex justify-center items-center flex-col gap-5 md:gap-[60px] xl:items-start xl:px-[110px]">
         <img src={Logo} className="w-[100px] md:w-[150px]" />
-        <div className="flex justify-center items-center flex-col gap-5 md:flex-row md:gap-[50px]">
+        <div className="flex justify-center items-center flex-col gap-5 md:flex-row md:gap-[50px] xl:flex-col xl:items-start">
           <Link to="/illusio/" onClick={scrollUp}>
             Home
           </Link>
@@ -31,7 +31,7 @@ export default function Footer() {
             Contact
           </Link>
         </div>
-        <div className="flex justify-center items-center gap-5 pb-10">
+        <div className="flex justify-center items-center gap-5 pb-10 xl:justify-end">
           <img src={Instagram} className="w-[30px]" />
           <img src={X} className="w-[30px]" />
           <img src={Facebook} className="w-[30px]" />
