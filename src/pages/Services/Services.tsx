@@ -41,16 +41,22 @@ export default function Services() {
         </div>
         {/* Hologram 2nd Section */}
         <div className="mt-5 text-center flex flex-col justify-center items-center gap-5">
-          <div className="mt-5 text-center flex flex-col justify-center items-center gap-[62px] lg:flex-row-reverse">
-            <img src={HologramTent2} className="lg:w-[607px]" />
+          <div className="mt-5 text-center flex flex-col justify-center items-center gap-[62px] xl:flex-row-reverse">
+            <img
+              src={HologramTent2}
+              className="w-[311px] md:w-[673px] lg:w-[500px] xl:w-[607px] object-cover"
+            />
             <p className="lg:w-[607px]">
               We offer the highest quality holographic imagery with a variety of
               sizes and a vast library of animations. A Premium experience for
               our deserving customers.
             </p>
           </div>
-          <div className="mt-5 text-center flex flex-col justify-center items-center gap-[62px] lg:flex-row">
-            <img src={HologramTent3} className="lg:w-[607px]" />
+          <div className="mt-5 text-center flex flex-col justify-center items-center gap-[62px] xl:flex-row">
+            <img
+              src={HologramTent3}
+              className="w-[311px] md:w-[673px] lg:w-[500px] xl:w-[607px]"
+            />
             <p className="lg:w-[607px]">
               Our hologram Stands are created using plexiglass sheets that are
               delivered by our third party providers and shaped to the precise
@@ -66,8 +72,14 @@ export default function Services() {
             Featued Galleries
           </p>
           <div className="mt-10 flex justify-center items-center flex-col gap-[50px] lg:flex-row">
-            <img src={HologramTent4} className="lg:w-[540px]" />
-            <img src={HologramTent5} className="lg:w-[540px]" />
+            <img
+              src={HologramTent4}
+              className="lg:w-[full] lg:min-w-[400px] lg:max-w-[540px]"
+            />
+            <img
+              src={HologramTent5}
+              className="lg:w-[full] lg:min-w-[400px] lg:max-w-[540px]"
+            />
           </div>
         </div>
 

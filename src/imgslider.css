@@ -1,10 +1,8 @@
 .img-slider-img {
     object-fit: cover;
-    width: 327%;
     height: 390px;
-    display: block;
-    flex-shrink: 0;
-    flex-grow: 0;
+    flex: 0 0 auto;
+    width: 100%;
     transition: translate 300ms ease-in-out;
 }
 
@@ -39,3 +37,19 @@
 }
 
 
+@media (min-width: 768px) and (max-width: 1023px) {
+    .img-slider-img {
+      width: 30px; 
+       
+    }
+  
+    .img-slider-img:last-child {
+      margin-right: 0; /* Remove margin from the last image */
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .img-slider-img {
+      width: auto; /* Default or auto width */
+    }
+  }

@@ -24,7 +24,7 @@ export default function OurHistory() {
           showcase for storytelling.
         </p>
       </div>
-      <div className="max-w-[1200px] w-full h-[500px] m-[0 auto]">
+      <div className="">
         <ImgSlider slides={HistoryList} />
       </div>
     </section>
