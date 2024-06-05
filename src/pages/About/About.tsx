@@ -9,7 +9,7 @@ export default function About() {
     <>
       <HeaderSection title="About Us" />
       <OurHistory />
-      <div className="mt-5 px-[32px] font-Inter md:px-[50px]">
+      <div className="mt-5 px-[32px] font-Inter md:px-[50px] lg:px-[110px]">
         {/* CEO Section */}
 
         <div className="flex items-center">
@@ -40,7 +40,7 @@ export default function About() {
             </p>
             <img
               src={CEOImg2}
-              className="object-cover w-[313px] h-[199px] md:w-full md:h-[390px]"
+              className="object-cover w-[313px] h-[199px] md:w-full md:h-[390px] lg:w-[983px] lg:h-[496px]"
             />
           </div>
         </div>
@@ -49,7 +49,7 @@ export default function About() {
       {/* Concept Section */}
 
       <div className="mt-5">
-        <div className="flex items-center px-[32px] md:px-[50px]">
+        <div className="flex items-center px-[32px] md:px-[50px] lg:px-[110px]">
           <h2 className="font-BankGothic text-[20px] whitespace-nowrap mr-4">
             Concept Event
           </h2>

@@ -7,7 +7,7 @@ type HeaderProps = {
 export default function HeaderSection({ title }: HeaderProps) {
   return (
     <div
-      className="w-full h-[215px] bg-cover bg-center"
+      className="w-full h-[215px] bg-cover bg-center mt-[100px]"
       style={{ backgroundImage: `url(${Header})` }}
     >
       <div className="flex justify-center items-center">

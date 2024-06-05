@@ -10,8 +10,8 @@ export default function FrequentQuestions() {
           Frequent Questions
         </h2>
       </div>
-      <div className="mt-10 flex justify-center items-center gap-5 flex-col">
-        <img src={FrequentQuestionImg} />
+      <div className="mt-10 flex justify-center items-center gap-5 flex-col lg:flex-row">
+        <img src={FrequentQuestionImg} className="lg:w-[540px]" />
         <FrequentQuestionsList />
       </div>
     </div>
