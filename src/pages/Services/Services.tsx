@@ -10,7 +10,7 @@ export default function Services() {
   return (
     <>
       <HeaderSection title="Services" />
-      <section className="mt-10 px-[32px] font-Inter md:px-[50px]">
+      <section className="mt-10 px-[32px] font-Inter md:px-[50px] lg:px-[110px]">
         <div className="flex items-center">
           <h2 className="font-BankGothic text-[20px] whitespace-nowrap mr-4">
             What We Offer
@@ -41,17 +41,17 @@ export default function Services() {
         </div>
         {/* Hologram 2nd Section */}
         <div className="mt-5 text-center flex flex-col justify-center items-center gap-5">
-          <div className="mt-5 text-center flex flex-col justify-center items-center gap-[62px]">
-            <img src={HologramTent2} />
-            <p>
+          <div className="mt-5 text-center flex flex-col justify-center items-center gap-[62px] lg:flex-row-reverse">
+            <img src={HologramTent2} className="lg:w-[607px]" />
+            <p className="lg:w-[607px]">
               We offer the highest quality holographic imagery with a variety of
               sizes and a vast library of animations. A Premium experience for
               our deserving customers.
             </p>
           </div>
-          <div className="mt-5 text-center flex flex-col justify-center items-center gap-[62px]">
-            <img src={HologramTent3} />
-            <p>
+          <div className="mt-5 text-center flex flex-col justify-center items-center gap-[62px] lg:flex-row">
+            <img src={HologramTent3} className="lg:w-[607px]" />
+            <p className="lg:w-[607px]">
               Our hologram Stands are created using plexiglass sheets that are
               delivered by our third party providers and shaped to the precise
               measurements using leading edge laser cutting machine & computer
@@ -65,9 +65,9 @@ export default function Services() {
           <p className="font-BankGothic text-[18px] md:text-[24px]">
             Featued Galleries
           </p>
-          <div className="mt-10 flex justify-center items-center flex-col gap-[50px]">
-            <img src={HologramTent4} />
-            <img src={HologramTent5} />
+          <div className="mt-10 flex justify-center items-center flex-col gap-[50px] lg:flex-row">
+            <img src={HologramTent4} className="lg:w-[540px]" />
+            <img src={HologramTent5} className="lg:w-[540px]" />
           </div>
         </div>
 
