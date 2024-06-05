@@ -15,7 +15,7 @@ function App() {
         <div>
           <Navbar />
         </div>
-        <div className="pt-[100px]">
+        <div className="">
           <Routes>
             <Route path="/illusio/" element={<HomePage />} />
             <Route path="/illusio/aboutus" element={<About />} />
