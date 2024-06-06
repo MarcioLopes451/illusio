@@ -11,7 +11,6 @@ export default function Contact() {
   const [subject, setSubject] = useState<string>("");
   const [message, setMessage] = useState<string>("");
   const [cols, setCols] = useState<number>(50);
-  //const [validation, setValidation] = useState<boolean>(false);
   const emailRegex = /\S+@\S+\.\S+/;
   const phoneRegex =
     /^(?:\+44|0)\s?\d{4}\s?\d{6}$|^(?:\+44|0)\s?\d{3}\s?\d{3}\s?\d{4}$|^(?:\+44|0)\s?\d{2}\s?\d{4}\s?\d{4}$/;
@@ -89,11 +88,11 @@ export default function Contact() {
 
         <div
           className="flex justify-center items-center flex-col gap-10 
-        xl:flex-row xl:items-start xl:justify-between xl:gap-[50px] px-[32px] md:px-[50px] xl:px-[110px] "
+        xl:flex-row xl:items-start xl:justify-between xl:gap-[50px] px-[32px] md:px-[50px] xl:px-[110px]"
         >
           {/*  */}
 
-          <div className="mt-10 xl:w-[78%]">
+          <div className="mt-10 xl:w-[600px]">
             <div className="flex justify-center items-center xl:justify-start">
               <h3
                 className="font-Inter text-2xl font-medium
@@ -103,13 +102,13 @@ export default function Contact() {
               </h3>
             </div>
             <div className="flex justify-center items-center flex-col pb-5 xl:items-start">
-              <div className="flex justify-center items-center flex-col py-5 md:flex-row md:flex-wrap lg:gap-x-[155px] xl:gap-x-[70px] gap-6 xl:justify-start">
+              <div className="flex justify-center items-center flex-col py-5 md:flex-row md:flex-wrap lg:gap-x-[155px] xl:gap-x-[70px] gap-6 xl:justify-between">
                 <div>
                   <input
                     type="text"
                     value={firstName}
                     onChange={(e) => setFirstName(e.target.value)}
-                    className="border-white border-[3px] w-[300px] h-[48px] mt-5 rounded-lg bg-transparent shadow-white pl-3 xl:w-[285px]"
+                    className="border-white border-[3px] w-[300px] h-[48px] mt-5 rounded-lg bg-transparent shadow-white pl-3 xl:w-[260px]"
                     placeholder="Name*"
                   />
                 </div>
@@ -118,7 +117,7 @@ export default function Contact() {
                     type="text"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="border-white border-[3px] w-[300px] h-[48px] mt-5 rounded-lg bg-transparent pl-3 xl:w-[285px]"
+                    className="border-white border-[3px] w-[300px] h-[48px] mt-5 rounded-lg bg-transparent pl-3 xl:w-[260px]"
                     placeholder="Email*"
                   />
                 </div>
@@ -127,7 +126,7 @@ export default function Contact() {
                     type="tel"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
-                    className="border-white border-[3px] w-[300px] h-[48px] mt-5 rounded-lg bg-transparent pl-3 xl:w-[285px]"
+                    className="border-white border-[3px] w-[300px] h-[48px] mt-5 rounded-lg bg-transparent pl-3 xl:w-[260px]"
                     placeholder="Phone*"
                   />
                 </div>
@@ -136,7 +135,7 @@ export default function Contact() {
                     type="text"
                     value={subject}
                     onChange={(e) => setSubject(e.target.value)}
-                    className="border-white border-[3px] w-[300px] h-[48px] mt-5 rounded-lg bg-transparent pl-3 xl:w-[285px]"
+                    className="border-white border-[3px] w-[300px] h-[48px] mt-5 rounded-lg bg-transparent pl-3 xl:w-[260px]"
                     placeholder="Subject*"
                   />
                 </div>
