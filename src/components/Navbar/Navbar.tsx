@@ -57,7 +57,7 @@ export default function Navbar() {
 
   return (
     <div
-      className="w-full h-[101px] bg-black z-50 fixed top-0 transition-colors lg:bg-none font-Inter"
+      className="w-full h-[101px] bg-black z-50 fixed top-0 transition-colors lg:bg-none"
       style={{
         backgroundColor: getBackgroundColor(),
         backdropFilter:
@@ -70,7 +70,7 @@ export default function Navbar() {
         <Link to="/illusio/" onClick={scrollUp}>
           <img src={Logo} className="w-[100px] bg-cover cursor-pointer" />
         </Link>
-        <div className="hidden lg:flex flex-row gap-9 text-white text-[16px] px-6 font-medium tracking-widest text-center">
+        <div className="hidden lg:flex flex-row gap-9 text-white text-[16px] tracking-widest font-Inter font-regular">
           <Link to="/illusio/" onClick={scrollUp}>
             Home
           </Link>
