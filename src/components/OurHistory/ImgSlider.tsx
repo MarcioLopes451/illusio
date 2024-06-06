@@ -42,7 +42,9 @@ export default function ImgSlider({ slides }: ImgProps) {
               width:
                 window.innerWidth >= 768 && window.innerWidth < 1024
                   ? "calc((100% / 2) - 10px)"
-                  : `${90 / imagesToShow}% `,
+                  : window.innerWidth >= 1024 && window.innerWidth < 1440
+                  ? "calc((100% / 3) - 15px)"
+                  : `${100 / imagesToShow}% `,
             }}
             className="img-slider-img"
           />

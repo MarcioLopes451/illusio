@@ -50,6 +50,9 @@
   
   @media (min-width: 1024px) {
     .img-slider-img {
-      width: auto; /* Default or auto width */
+      width: auto; 
+    }
+    .img-slider-img2 { 
+      height: 700px;
     }
   }

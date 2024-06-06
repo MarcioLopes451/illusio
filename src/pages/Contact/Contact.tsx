@@ -89,14 +89,21 @@ export default function Contact() {
 
         <div
           className="flex justify-center items-center flex-col gap-10 
-        xl:flex-row xl:items-start xl:justify-between xl:gap-[50px] px-[32px] md:px-[50px] xl:px-[110px]"
+        xl:flex-row xl:items-start xl:justify-between xl:gap-[50px] px-[32px] md:px-[50px] xl:px-[110px] "
         >
-          <div className="mt-10">
-            <h3 className="font-Inter text-2xl text-center font-medium xl:text-left">
-              Contact Form
-            </h3>
-            <div className="flex justify-center items-center flex-col pb-5">
-              <div className="flex justify-center items-center flex-col py-5 md:flex-row md:flex-wrap gap-6 xl:justify-start">
+          {/*  */}
+
+          <div className="mt-10 xl:w-[78%]">
+            <div className="flex justify-center items-center xl:justify-start">
+              <h3
+                className="font-Inter text-2xl font-medium
+            "
+              >
+                Contact Form
+              </h3>
+            </div>
+            <div className="flex justify-center items-center flex-col pb-5 xl:items-start">
+              <div className="flex justify-center items-center flex-col py-5 md:flex-row md:flex-wrap lg:gap-x-[155px] xl:gap-x-[70px] gap-6 xl:justify-start">
                 <div>
                   <input
                     type="text"
@@ -135,7 +142,7 @@ export default function Contact() {
                 </div>
               </div>
               <div className="flex justify-center items-center flex-col gap-10 py-5">
-                <div className="mx-[32px] md:mx-[40px]">
+                <div className="mx-[32px] md:mx-[40px] xl:mx-0">
                   <textarea
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
@@ -146,7 +153,7 @@ export default function Contact() {
                 </div>
               </div>
               <button
-                className="w-full h-[84px] bg-[#015A92] text-white px-[25px] py-[15px] font-semibold font-Roboto text-center rounded-md"
+                className="w-full h-[84px] bg-[#015A92] text-white px-[25px] py-[15px] font-semibold font-Roboto text-center rounded-md lg:w-[85%] xl:w-full"
                 onClick={nameValidation}
               >
                 Send Message
@@ -157,7 +164,7 @@ export default function Contact() {
           {/* Contact Info */}
 
           <div
-            className="mt-10 px-[32px] text-center flex justify-center items-center flex-col gap-5 
+            className="mt-10 text-center flex justify-center items-center flex-col gap-5 
           xl:items-start xl:text-left xl:w-[550px] xl:px-0"
           >
             <h3 className="font-Inter text-2xl font-medium">Contact Info</h3>
@@ -167,15 +174,15 @@ export default function Contact() {
               or need support, our team is here to help.
             </p>
             <div className="text-center flex justify-center items-start flex-col gap-5">
-              <div className="text-center flex justify-center items-center flex-row gap-5">
+              <div className="text-center flex justify-center items-center flex-row gap-5 xl:text-left">
                 <img src={LocationImg} />
                 <p>71-75 Shelton Street, Covent Garden, London, WC2H 9JQ</p>
               </div>
-              <div className="text-center flex justify-center items-center flex-row gap-5">
+              <div className="text-center flex justify-center items-center flex-row gap-5 xl:text-left">
                 <img src={PhoneImg} />
                 <p>+44 7517439370</p>
               </div>
-              <div className="text-center flex justify-center items-center flex-row gap-5">
+              <div className="text-center flex justify-center items-center flex-row gap-5 xl:text-left">
                 <img src={EmailImg} />
                 <p>henriquebaena98@gmail.com</p>
               </div>

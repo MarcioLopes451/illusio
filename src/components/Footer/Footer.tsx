@@ -12,26 +12,28 @@ export default function Footer() {
 
   return (
     <div className="bg-[#141619] pt-10 font-Inter">
-      <div className="flex justify-center items-center flex-col gap-5 md:gap-[60px] xl:items-start xl:px-[110px]">
-        <img src={Logo} className="w-[100px] md:w-[150px]" />
-        <div className="flex justify-center items-center flex-col gap-5 md:flex-row md:gap-[50px] xl:flex-col xl:items-start">
-          <Link to="/illusio/" onClick={scrollUp}>
-            Home
-          </Link>
-          <Link to="/illusio/aboutus" onClick={scrollUp}>
-            About Us
-          </Link>
-          <Link to="/illusio/services" onClick={scrollUp}>
-            Services
-          </Link>
-          <Link to="/illusio/blog" onClick={scrollUp}>
-            Blog
-          </Link>
-          <Link to="/illusio/contact" onClick={scrollUp}>
-            Contact
-          </Link>
+      <div className="flex flex-col items-center gap-5 md:gap-[60px] xl:flex-row xl:px-[110px] xl:justify-between w-full">
+        <div className="flex flex-col items-center gap-5 xl:items-start">
+          <img src={Logo} className="w-[100px] md:w-[150px]" />
+          <div className="flex flex-col items-center gap-5 md:flex-row md:gap-[50px] xl:flex-col xl:items-start">
+            <Link to="/illusio/" onClick={scrollUp}>
+              Home
+            </Link>
+            <Link to="/illusio/aboutus" onClick={scrollUp}>
+              About Us
+            </Link>
+            <Link to="/illusio/services" onClick={scrollUp}>
+              Services
+            </Link>
+            <Link to="/illusio/blog" onClick={scrollUp}>
+              Blog
+            </Link>
+            <Link to="/illusio/contact" onClick={scrollUp}>
+              Contact
+            </Link>
+          </div>
         </div>
-        <div className="flex justify-center items-center gap-5 pb-10 xl:justify-end">
+        <div className="flex items-center gap-5 pb-10 xl:ml-auto">
           <img src={Instagram} className="w-[30px]" />
           <img src={X} className="w-[30px]" />
           <img src={Facebook} className="w-[30px]" />
