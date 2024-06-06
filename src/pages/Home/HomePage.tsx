@@ -1,7 +1,7 @@
-import HeroVideo from "../../videos/herovideo.mp4";
-import hologramImg1 from "../../images/Blue Jellyfish.jpg";
+import HeroVideo from "../../videos/heroVideoEdit.mp4";
+import hologramImg1 from "../../images/Blue Butterfly.jpg";
 import hologramImg2 from "../../images/Hummingbird (Green).jpg";
-import FinalVideo from "../../videos/finalvideo.mp4";
+import FinalVideo from "../../videos/finalVideoEdited.mp4";
 
 export default function HomePage() {
   return (
@@ -72,12 +72,12 @@ export default function HomePage() {
       {/* Final Section */}
 
       <div className="w-full flex justify-center items-start text-center relative overflow-hidden">
-        <div className="relative w-full h-[300px] md:h-[353px] ">
+        <div className="relative w-full h-[300px] md:h-[600px] xl:h-[800px]">
           <video
             loop
             autoPlay
             muted
-            className="absolute top-0 left-0 w-full h-full object-cover -z-10"
+            className="absolute top-0 left-0 w-full h-full object-cover"
           >
             <source src={FinalVideo} type="video/mp4" />
           </video>
