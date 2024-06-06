@@ -31,7 +31,7 @@ export default function HomePage() {
 
       {/* Intro Section */}
 
-      <div className="bg-[#141619] pt-[22px] px-[32px] pb-[100px] md:px-[50px] lg:px-[110px]">
+      <div className="bg-[#141619] pt-[22px] px-[32px] pb-[100px] md:px-[50px] xl:px-[110px]">
         <div className="flex items-center">
           <h2 className="font-BankGothic text-[20px] whitespace-nowrap mr-4">
             ILLUSIO

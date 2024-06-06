@@ -9,7 +9,7 @@ export default function About() {
     <>
       <HeaderSection title="About Us" />
       <OurHistory />
-      <div className="mt-5 px-[32px] font-Inter md:px-[50px] lg:px-[110px]">
+      <div className="mt-5 px-[32px] font-Inter md:px-[50px] xl:px-[110px]">
         {/* CEO Section */}
 
         <div className="flex items-center">
@@ -49,7 +49,7 @@ export default function About() {
       {/* Concept Section */}
 
       <div className="mt-5">
-        <div className="flex items-center px-[32px] md:px-[50px] lg:px-[110px]">
+        <div className="flex items-center px-[32px] md:px-[50px] xl:px-[110px]">
           <h2 className="font-BankGothic text-[20px] whitespace-nowrap mr-4">
             Concept Event
           </h2>

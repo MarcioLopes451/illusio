@@ -7,7 +7,7 @@ const HistoryList = [Img1, Img3, Img2];
 
 export default function OurHistory() {
   return (
-    <section className="mt-10 px-[32px] md:px-[50px] lg:px-[110px]">
+    <section className="mt-10 px-[32px] md:px-[50px] xl:px-[110px]">
       <div className="flex items-center">
         <h2 className="font-BankGothic text-[20px] whitespace-nowrap mr-4">
           Our History

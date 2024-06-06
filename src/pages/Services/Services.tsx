@@ -10,7 +10,7 @@ export default function Services() {
   return (
     <>
       <HeaderSection title="Services" />
-      <section className="mt-10 px-[32px] font-Inter md:px-[50px] lg:px-[110px]">
+      <section className="mt-10 px-[32px] font-Inter md:px-[50px] xl:px-[110px]">
         <div className="flex items-center">
           <h2 className="font-BankGothic text-[20px] whitespace-nowrap mr-4">
             What We Offer
@@ -30,7 +30,7 @@ export default function Services() {
           </p>
           <img
             src={HologramTent1}
-            className="w-full object-cover md:h-[376px]"
+            className="w-full object-cover md:h-[376px] xl:w-[950px] xl:h-[530px]"
           />
           <p className="text-[16px] md:text-[18px]">
             Crafted with original stories tailored exclusively for our hologram
@@ -44,9 +44,9 @@ export default function Services() {
           <div className="mt-5 text-center flex flex-col justify-center items-center gap-[62px] xl:flex-row-reverse">
             <img
               src={HologramTent2}
-              className="w-[311px] md:w-[673px] lg:w-[500px] xl:w-[607px] object-cover"
+              className="w-[311px] md:w-[673px] xl:w-[607px] object-cover"
             />
-            <p className="lg:w-[607px]">
+            <p className="xl:w-[607px]">
               We offer the highest quality holographic imagery with a variety of
               sizes and a vast library of animations. A Premium experience for
               our deserving customers.
@@ -55,9 +55,9 @@ export default function Services() {
           <div className="mt-5 text-center flex flex-col justify-center items-center gap-[62px] xl:flex-row">
             <img
               src={HologramTent3}
-              className="w-[311px] md:w-[673px] lg:w-[500px] xl:w-[607px]"
+              className="w-[311px] md:w-[673px] xl:w-[607px]"
             />
-            <p className="lg:w-[607px]">
+            <p className="xl:w-[607px]">
               Our hologram Stands are created using plexiglass sheets that are
               delivered by our third party providers and shaped to the precise
               measurements using leading edge laser cutting machine & computer
