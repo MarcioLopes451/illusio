@@ -33,7 +33,7 @@ export default function Footer() {
             </Link>
           </div>
         </div>
-        <div className="flex items-center gap-5 pb-10 xl:ml-auto">
+        <div className="flex items-center gap-5 pb-10 xl:mt-[420px]">
           <img src={Instagram} className="w-[30px]" />
           <img src={X} className="w-[30px]" />
           <img src={Facebook} className="w-[30px]" />
