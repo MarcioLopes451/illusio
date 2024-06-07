@@ -40,7 +40,7 @@ export default function Navbar() {
     const { pathname } = location;
     const isTransparent = width > 768 && !isTop;
 
-    if (pathname === "/illusio/") {
+    if (pathname === "/") {
       return width <= 768 ? "black" : isTransparent ? "black" : "transparent";
     } else {
       return "black";
