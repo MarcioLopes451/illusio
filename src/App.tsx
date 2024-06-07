@@ -17,12 +17,12 @@ function App() {
         </div>
         <div className="">
           <Routes>
-            <Route path="/illusio/" element={<HomePage />} />
-            <Route path="/illusio/aboutus" element={<About />} />
-            <Route path="/illusio/services" element={<Services />} />
-            <Route path="/illusio/blog" element={<Blog />} />
-            <Route path="/illusio/blog/:id" element={<BlogPost />} />
-            <Route path="/illusio/contact" element={<Contact />} />
+            <Route path="/" element={<HomePage />} />
+            <Route path="/aboutus" element={<About />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:id" element={<BlogPost />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
           <Footer />
         </div>
