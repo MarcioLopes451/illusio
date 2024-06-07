@@ -15,19 +15,19 @@ export default function MobileNav({ isOpen, onClose }: Nav) {
     <div className="fixed top-24 bg-transparent z-50 font-Roboto w-full">
       <div className="bg-black py-9 h-screen">
         <div className="flex mt-20 flex-col gap-9 text-white text-2xl px-6 font-light tracking-widest text-center">
-          <Link to="/illusio/" onClick={scrollUp}>
+          <Link to="/" onClick={scrollUp}>
             Home
           </Link>
-          <Link to="/illusio/aboutus" onClick={scrollUp}>
+          <Link to="/aboutus" onClick={scrollUp}>
             About Us
           </Link>
-          <Link to="/illusio/services" onClick={scrollUp}>
+          <Link to="/services" onClick={scrollUp}>
             Services
           </Link>
-          <Link to="/illusio/blog" onClick={scrollUp}>
+          <Link to="/blog" onClick={scrollUp}>
             Blog
           </Link>
-          <Link to="/illusio/contact" onClick={scrollUp}>
+          <Link to="/contact" onClick={scrollUp}>
             Contact
           </Link>
         </div>
