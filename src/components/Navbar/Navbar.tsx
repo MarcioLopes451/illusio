@@ -67,23 +67,23 @@ export default function Navbar() {
       }}
     >
       <div className="flex justify-between items-center px-8 pt-6 md:px-[50px] xl:px-[110px]">
-        <Link to="/illusio/" onClick={scrollUp}>
+        <Link to="/" onClick={scrollUp}>
           <img src={Logo} className="w-[100px] bg-cover cursor-pointer" />
         </Link>
         <div className="hidden lg:flex flex-row gap-9 text-white text-[16px] tracking-widest font-Inter font-regular">
-          <Link to="/illusio/" onClick={scrollUp}>
+          <Link to="/" onClick={scrollUp}>
             Home
           </Link>
-          <Link to="/illusio/aboutus" onClick={scrollUp}>
+          <Link to="/aboutus" onClick={scrollUp}>
             About Us
           </Link>
-          <Link to="/illusio/services" onClick={scrollUp}>
+          <Link to="/services" onClick={scrollUp}>
             Services
           </Link>
-          <Link to="/illusio/blog" onClick={scrollUp}>
+          <Link to="/blog" onClick={scrollUp}>
             Blog
           </Link>
-          <Link to="/illusio/contact" onClick={scrollUp}>
+          <Link to="/contact" onClick={scrollUp}>
             Contact
           </Link>
         </div>

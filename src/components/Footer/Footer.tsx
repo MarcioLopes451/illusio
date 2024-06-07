@@ -14,21 +14,23 @@ export default function Footer() {
     <div className="bg-[#141619] pt-10 font-Inter">
       <div className="flex flex-col items-center gap-5 md:gap-[60px] xl:flex-row xl:px-[110px] xl:justify-between w-full">
         <div className="flex flex-col items-center gap-5 xl:items-start">
-          <img src={Logo} className="w-[100px] md:w-[150px]" />
+          <Link to="/" onClick={scrollUp}>
+            <img src={Logo} className="w-[100px] md:w-[150px]" />
+          </Link>
           <div className="flex flex-col items-center gap-5 md:flex-row md:gap-[50px] xl:flex-col xl:items-start">
-            <Link to="/illusio/" onClick={scrollUp}>
+            <Link to="/" onClick={scrollUp}>
               Home
             </Link>
-            <Link to="/illusio/aboutus" onClick={scrollUp}>
+            <Link to="/aboutus" onClick={scrollUp}>
               About Us
             </Link>
-            <Link to="/illusio/services" onClick={scrollUp}>
+            <Link to="/services" onClick={scrollUp}>
               Services
             </Link>
-            <Link to="/illusio/blog" onClick={scrollUp}>
+            <Link to="/blog" onClick={scrollUp}>
               Blog
             </Link>
-            <Link to="/illusio/contact" onClick={scrollUp}>
+            <Link to="/contact" onClick={scrollUp}>
               Contact
             </Link>
           </div>
