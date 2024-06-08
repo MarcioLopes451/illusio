@@ -19,7 +19,7 @@ export default function HomePage() {
             <source src={HeroVideo} type="video/mp4" />
           </video>
         </div>
-        <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center md:block md:top-[100px]">
+        <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center md:block md:top-[200px] xl:left-[50px]">
           <h2
             className="font-BankGothic text-center text-2xl px-[86px] 
           md:text-left md:px-[50px] md:text-[34px] md:w-[300px] tracking-wider"
