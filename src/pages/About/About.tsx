@@ -9,7 +9,7 @@ export default function About() {
     <>
       <HeaderSection title="About Us" />
       <OurHistory />
-      <div className="mt-5 px-[32px] font-Inter md:px-[50px] xl:px-[110px]">
+      <div className="mt-5 px-[32px] font-Inter md:px-[50px] xl:px-[110px] text-[#CFCFCF]">
         {/* CEO Section */}
 
         <div className="flex items-center">
@@ -24,11 +24,13 @@ export default function About() {
               src={CEOImg}
               className="object-cover w-[311px] h-[361px] rounded-lg md:w-[360px] md:h-[360px]"
             />
-            <h3 className="text-[20px]">Henrique Fernandes</h3>
+            <h3 className="text-[20px] text-white">Henrique Fernandes</h3>
             <h3 className="text-[16px] opacity-60 font-light">CEO & Founder</h3>
           </div>
           <div className="mt-5 flex justify-center items-center flex-col gap-5 text-center md:mt-[75px]">
-            <h3 className="text-[18px] md:text-[20px]">Our CEO's backstory</h3>
+            <h3 className="text-[18px] md:text-[20px] text-white">
+              Our CEO's backstory
+            </h3>
             <p className="text-[16px] font-light md:text-[18px]">
               Henrique has been in the engineering field for nearly a decade.
               With both academic research and real-world engineering experience
