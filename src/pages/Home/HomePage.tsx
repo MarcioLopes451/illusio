@@ -43,11 +43,15 @@ export default function HomePage() {
             <h3 className="font-semibold text-xl tracking-wide md:text-[22px]">
               A Glimpse into the Future
             </h3>
-            <p className="font-light mt-[31px] md:text-[18px] lg:text-left">
+            <p className="font-light mt-[31px] md:text-[18px] lg:text-left text-[#CFCFCF]">
               Introducing illusio, the cutting-edge AI companion that redefines
-              your reality. Step into a world of wonder where illusion meets
-              innovation. illusio is more than just a device; it's a gateway to
-              a new dimension of interaction. <br /> <br />
+              your reality. Step into a world of wonder where
+              <span className="font-semibold text-white">
+                {" "}
+                illusion meets innovation
+              </span>
+              . illusio is more than just a device; it's a gateway to a new
+              dimension of interaction. <br /> <br />
               From personal assistance to immersive entertainment, illusio
               brings your wildest dreams to life with its advanced holographic
               capabilities. Embrace the future of technology and let illusio

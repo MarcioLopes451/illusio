@@ -1,5 +1,5 @@
 import HeaderSection from "../../components/Header/HeaderSection";
-import HologramTent1 from "../../images/WhatsApp Image 2024-05-27 at 22.00 1.png";
+import HologramTent1 from "../../images/WhatsApp Image 2024-06-08 at 12.14.46.jpeg";
 import HologramTent2 from "../../images/3D Architecture Render of Hologram Tent (5).jpeg";
 import HologramTent3 from "../../images/3D Architecture Render of Hologram Tent (4).jpeg";
 import HologramTent4 from "../../images/3D Architecture Render of Hologram Tent (6).jpeg";
@@ -23,7 +23,7 @@ export default function Services() {
           <h2 className="font-BankGothic text-[18px] md:text-[24px]">
             Hologram Tents
           </h2>
-          <p className="text-[16px] md:text-[18px]">
+          <p className="text-[16px] md:text-[18px] text-[#CFCFCF]">
             Our hologram tents deliver an unparalleled experience, transporting
             you to fantastical realms. Each Pavilion provides a complete
             blackout environment, ensuring full immersion in our hologram films.
@@ -32,11 +32,15 @@ export default function Services() {
             src={HologramTent1}
             className="w-full object-cover md:h-[376px] xl:w-[950px] xl:h-[530px]"
           />
-          <p className="text-[16px] md:text-[18px]">
+          <p className="text-[16px] md:text-[18px] text-[#CFCFCF]">
             Crafted with original stories tailored exclusively for our hologram
             tents, illusio offers a unique and captivating adventure every time.
-            Dive into a world of storytelling like never before with illusio’s
-            Hologram Tents.
+            Dive into a{" "}
+            <span className="font-semibold text-white">
+              {" "}
+              world of storytelling
+            </span>{" "}
+            like never before with illusio’s Hologram Tents.
           </p>
         </div>
         {/* Hologram 2nd Section */}
@@ -46,10 +50,18 @@ export default function Services() {
               src={HologramTent2}
               className="w-[311px] md:w-[673px] xl:w-[607px] object-cover"
             />
-            <p className="xl:w-[607px]">
-              We offer the highest quality holographic imagery with a variety of
-              sizes and a vast library of animations. A Premium experience for
-              our deserving customers.
+            <p className="xl:w-[607px] text-[#CFCFCF]">
+              We offer the{" "}
+              <span className="font-semibold text-white">
+                {" "}
+                Highest quality holographic imagery
+              </span>{" "}
+              with a variety of sizes and a vast{" "}
+              <span className="font-semibold text-white">
+                {" "}
+                Library of animations
+              </span>{" "}
+              . A Premium experience for our deserving customers.
             </p>
           </div>
           <div className="mt-5 text-center flex flex-col justify-center items-center gap-[62px] xl:flex-row">
@@ -57,11 +69,15 @@ export default function Services() {
               src={HologramTent3}
               className="w-[311px] md:w-[673px] xl:w-[607px]"
             />
-            <p className="xl:w-[607px]">
+            <p className="xl:w-[607px] text-[#CFCFCF]">
               Our hologram Stands are created using plexiglass sheets that are
               delivered by our third party providers and shaped to the precise
-              measurements using leading edge laser cutting machine & computer
-              modelling software.
+              measurements using{" "}
+              <span className="font-semibold text-white">
+                {" "}
+                leading edge laser cutting machine & computer modelling software
+              </span>{" "}
+              .
             </p>
           </div>
         </div>
