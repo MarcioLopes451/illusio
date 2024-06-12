@@ -1,19 +1,22 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, FormEvent } from "react";
 import HeaderSection from "../../components/Header/HeaderSection";
 import LocationImg from "../../images/352521_location_on_icon (1).png";
 import PhoneImg from "../../images/352510_local_phone_icon (1).png";
 import EmailImg from "../../images/134146_mail_email_icon.png";
+import emailjs from "@emailjs/browser";
 
 export default function Contact() {
-  const [firstName, setFirstName] = useState<string>("");
+  const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [phone, setPhone] = useState<string>("");
   const [subject, setSubject] = useState<string>("");
   const [message, setMessage] = useState<string>("");
+  const [vaild, setVaild] = useState<boolean>(false);
   const [cols, setCols] = useState<number>(50);
   const emailRegex = /\S+@\S+\.\S+/;
   const phoneRegex =
     /^(?:\+44|0)\s?\d{4}\s?\d{6}$|^(?:\+44|0)\s?\d{3}\s?\d{3}\s?\d{4}$|^(?:\+44|0)\s?\d{2}\s?\d{4}\s?\d{4}$/;
+  const form = useRef<HTMLFormElement | null>(null);
 
   useEffect(() => {
     const handleResize = () => {
@@ -30,8 +33,9 @@ export default function Contact() {
     };
   }, []);
 
-  const nameValidation = () => {
-    if (firstName.trim() === "") {
+  const nameValidation = (e: FormEvent) => {
+    e.preventDefault();
+    if (name.trim() === "") {
       console.log("no name");
       return;
     }
@@ -55,12 +59,30 @@ export default function Contact() {
       console.log("no message");
       return;
     }
+    setVaild(true);
 
-    setFirstName("");
-    setMessage("");
-    setEmail("");
-    setSubject("");
-    setPhone("");
+    if (form.current) {
+      emailjs
+        .sendForm(
+          "service_qga0l9o",
+          "template_9t11bfl",
+          form.current,
+          "vEO2YhyftI1G5_QqO"
+        )
+        .then(
+          () => {
+            console.log("SUCCESS!");
+            setName("");
+            setEmail("");
+            setPhone("");
+            setSubject("");
+            setMessage("");
+          },
+          (error) => {
+            console.log("FAILED...", error.text);
+          }
+        );
+    }
   };
   return (
     <>
@@ -101,63 +123,67 @@ export default function Contact() {
                 Contact Form
               </h3>
             </div>
-            <div className="flex justify-center items-center flex-col pb-5 xl:items-start">
-              <div className="flex justify-center items-center flex-col py-5 md:flex-row md:flex-wrap lg:gap-x-[155px] xl:gap-x-[70px] gap-6 xl:justify-between">
-                <div>
-                  <input
-                    type="text"
-                    value={firstName}
-                    onChange={(e) => setFirstName(e.target.value)}
-                    className="border-white border-[3px] w-[300px] h-[48px] mt-5 rounded-lg bg-transparent shadow-white pl-3 xl:w-[260px]"
-                    placeholder="Name*"
-                  />
+            <form ref={form} onSubmit={nameValidation}>
+              <div className="flex justify-center items-center flex-col pb-5 xl:items-start">
+                <div className="flex justify-center items-center flex-col py-5 md:flex-row md:flex-wrap lg:gap-x-[155px] xl:gap-x-[70px] gap-6 xl:justify-between">
+                  <div>
+                    <input
+                      type="text"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      className="border-white border-[3px] w-[300px] h-[48px] mt-5 rounded-lg bg-transparent shadow-white pl-3 xl:w-[260px]"
+                      placeholder="Name*"
+                      name="name"
+                    />
+                  </div>
+                  <div>
+                    <input
+                      type="text"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      className="border-white border-[3px] w-[300px] h-[48px] mt-5 rounded-lg bg-transparent pl-3 xl:w-[260px]"
+                      placeholder="Email*"
+                      name="email"
+                    />
+                  </div>
+                  <div>
+                    <input
+                      type="tel"
+                      value={phone}
+                      onChange={(e) => setPhone(e.target.value)}
+                      className="border-white border-[3px] w-[300px] h-[48px] mt-5 rounded-lg bg-transparent pl-3 xl:w-[260px]"
+                      placeholder="Phone*"
+                      name="number"
+                    />
+                  </div>
+                  <div>
+                    <input
+                      type="text"
+                      value={subject}
+                      onChange={(e) => setSubject(e.target.value)}
+                      className="border-white border-[3px] w-[300px] h-[48px] mt-5 rounded-lg bg-transparent pl-3 xl:w-[260px]"
+                      placeholder="Subject*"
+                      name="subject"
+                    />
+                  </div>
                 </div>
-                <div>
-                  <input
-                    type="text"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="border-white border-[3px] w-[300px] h-[48px] mt-5 rounded-lg bg-transparent pl-3 xl:w-[260px]"
-                    placeholder="Email*"
-                  />
+                <div className="flex justify-center items-center flex-col gap-10 py-5">
+                  <div className="mx-[32px] md:mx-[40px] xl:mx-0">
+                    <textarea
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
+                      className="border-white border-[3px] h-[341px] mt-5 rounded-lg bg-transparent p-3 w-full"
+                      placeholder="Message*"
+                      cols={cols}
+                      name="message"
+                    ></textarea>
+                  </div>
                 </div>
-                <div>
-                  <input
-                    type="tel"
-                    value={phone}
-                    onChange={(e) => setPhone(e.target.value)}
-                    className="border-white border-[3px] w-[300px] h-[48px] mt-5 rounded-lg bg-transparent pl-3 xl:w-[260px]"
-                    placeholder="Phone*"
-                  />
-                </div>
-                <div>
-                  <input
-                    type="text"
-                    value={subject}
-                    onChange={(e) => setSubject(e.target.value)}
-                    className="border-white border-[3px] w-[300px] h-[48px] mt-5 rounded-lg bg-transparent pl-3 xl:w-[260px]"
-                    placeholder="Subject*"
-                  />
-                </div>
+                <button className="w-full h-[84px] bg-[#015A92] text-white px-[25px] py-[15px] font-semibold font-Roboto text-center rounded-md lg:w-[85%] xl:w-full">
+                  {vaild === false ? <p>Send Message</p> : <p>Message Sent!</p>}
+                </button>
               </div>
-              <div className="flex justify-center items-center flex-col gap-10 py-5">
-                <div className="mx-[32px] md:mx-[40px] xl:mx-0">
-                  <textarea
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                    className="border-white border-[3px] h-[341px] mt-5 rounded-lg bg-transparent p-3 w-full"
-                    placeholder="Message*"
-                    cols={cols}
-                  ></textarea>
-                </div>
-              </div>
-              <button
-                className="w-full h-[84px] bg-[#015A92] text-white px-[25px] py-[15px] font-semibold font-Roboto text-center rounded-md lg:w-[85%] xl:w-full"
-                onClick={nameValidation}
-              >
-                Send Message
-              </button>
-            </div>
+            </form>
           </div>
 
           {/* Contact Info */}
