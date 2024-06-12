@@ -14,9 +14,14 @@ export default function Contact() {
   const [vaild, setVaild] = useState<boolean>(false);
   const [cols, setCols] = useState<number>(50);
   const emailRegex = /\S+@\S+\.\S+/;
-  const phoneRegex =
-    /^(?:\+44|0)\s?\d{4}\s?\d{6}$|^(?:\+44|0)\s?\d{3}\s?\d{3}\s?\d{4}$|^(?:\+44|0)\s?\d{2}\s?\d{4}\s?\d{4}$/;
   const form = useRef<HTMLFormElement | null>(null);
+
+  // error handling states
+  const [NameError, setNameError] = useState<string>("");
+  const [emailError, setEmailError] = useState<string>("");
+  const [phoneError, setPhoneError] = useState<string>("");
+  const [subjectError, setSubjectError] = useState<string>("");
+  const [messageError, setMessageError] = useState<string>("");
 
   useEffect(() => {
     const handleResize = () => {
@@ -35,30 +40,59 @@ export default function Contact() {
 
   const nameValidation = (e: FormEvent) => {
     e.preventDefault();
+
+    ("");
+    setNameError("");
+    setEmailError("");
+    setPhoneError("");
+    setSubjectError("");
+    setMessageError("");
+
+    let hasError = false;
+
     if (name.trim() === "") {
-      console.log("no name");
-      return;
+      setNameError("No name");
+      hasError = true;
+      setName("");
     }
 
-    if (!phoneRegex.test(phone.trim())) {
-      console.log("invalid phone number");
-      return;
+    if (phone.trim() === "") {
+      setPhoneError("No Phone Number");
+      hasError = true;
     }
 
     if (!emailRegex.test(email.trim())) {
-      console.log("invalid email");
-      return;
+      setEmailError("Invalid email");
+      setEmail("");
+      hasError = true;
+    }
+
+    if (email.trim() === "") {
+      setEmailError("No Email");
+      hasError = true;
     }
 
     if (subject.trim() === "") {
-      console.log("no subject");
-      return;
+      setSubjectError("No subject");
+      hasError = true;
     }
 
     if (message.trim() === "") {
-      console.log("no message");
+      setMessageError("No message");
+      hasError = true;
+    }
+
+    if (hasError) {
+      setTimeout(() => {
+        setNameError("");
+        setEmailError("");
+        setPhoneError("");
+        setSubjectError("");
+        setMessageError("");
+      }, 5000);
       return;
     }
+
     setVaild(true);
 
     if (form.current) {
@@ -126,7 +160,12 @@ export default function Contact() {
             <form ref={form} onSubmit={nameValidation}>
               <div className="flex justify-center items-center flex-col pb-5 xl:items-start">
                 <div className="flex justify-center items-center flex-col py-5 md:flex-row md:flex-wrap lg:gap-x-[155px] xl:gap-x-[70px] gap-6 xl:justify-between">
-                  <div>
+                  <div className="flex justify-start items-start flex-col relative">
+                    {NameError && (
+                      <span className="text-red-700 font-bold font-Inter absolute -top-3">
+                        {NameError}
+                      </span>
+                    )}
                     <input
                       type="text"
                       value={name}
@@ -136,7 +175,12 @@ export default function Contact() {
                       name="name"
                     />
                   </div>
-                  <div>
+                  <div className="flex justify-start items-start flex-col relative">
+                    {emailError && (
+                      <span className="text-red-700 font-bold font-Inter absolute -top-3">
+                        {emailError}
+                      </span>
+                    )}
                     <input
                       type="text"
                       value={email}
@@ -146,7 +190,12 @@ export default function Contact() {
                       name="email"
                     />
                   </div>
-                  <div>
+                  <div className="flex justify-start items-start flex-col relative">
+                    {phoneError && (
+                      <span className="text-red-700 font-bold font-Inter absolute -top-3">
+                        {phoneError}
+                      </span>
+                    )}
                     <input
                       type="tel"
                       value={phone}
@@ -156,7 +205,12 @@ export default function Contact() {
                       name="number"
                     />
                   </div>
-                  <div>
+                  <div className="flex justify-start items-start flex-col relative">
+                    {subjectError && (
+                      <span className="text-red-700 font-bold font-Inter absolute -top-3">
+                        {subjectError}
+                      </span>
+                    )}
                     <input
                       type="text"
                       value={subject}
@@ -168,7 +222,12 @@ export default function Contact() {
                   </div>
                 </div>
                 <div className="flex justify-center items-center flex-col gap-10 py-5">
-                  <div className="mx-[32px] md:mx-[40px] xl:mx-0">
+                  <div className="mx-[32px] md:mx-[40px] xl:mx-0 flex justify-start items-start flex-col relative">
+                    {messageError && (
+                      <span className="text-red-700 font-bold font-Inter absolute -top-3">
+                        {messageError}
+                      </span>
+                    )}
                     <textarea
                       value={message}
                       onChange={(e) => setMessage(e.target.value)}
