@@ -67,7 +67,7 @@ export default function Blog() {
                 </p>
               </div>
               <Link
-                to={`/illusio/blog/${p.id}`}
+                to={`/blog/${p.id}`}
                 key={p.id}
                 onClick={() =>
                   window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
