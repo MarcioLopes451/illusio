@@ -44,18 +44,17 @@ export default function HomePage() {
               A Glimpse into the Future
             </h3>
             <p className="font-light mt-[31px] md:text-[18px] lg:text-left text-[#CFCFCF]">
-              Introducing illusio, the cutting-edge AI companion that redefines
-              your reality. Step into a world of wonder where
+              Introducing illusio, a ground-breaking hologram company dedicated
+              to delivering the most awe-inspiring experiences your inner child
+              has always wished for. <br /> <br /> Our innovative technology and
+              creative storytelling transport you to fantastical worlds, where
               <span className="font-semibold text-white">
                 {" "}
                 illusion meets innovation
               </span>
-              . illusio is more than just a device; it's a gateway to a new
-              dimension of interaction. <br /> <br />
-              From personal assistance to immersive entertainment, illusio
-              brings your wildest dreams to life with its advanced holographic
-              capabilities. Embrace the future of technology and let illusio
-              transform the way you experience the world.
+              . Experience the magic and wonder of holograms like never before.
+              With illusio, dreams become reality, and every moment is filled
+              with enchantment and excitement.
             </p>
           </div>
           <div className="flex justify-center items-center flex-col gap-14 mt-[47px] md:flex-row lg:ml-[20px]">
