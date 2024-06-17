@@ -1,18 +1,42 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import HeaderSection from "../../components/Header/HeaderSection";
-import { PostData } from "../../data/PostData";
 import { Link } from "react-router-dom";
 import RightArrow from "../../images/4829869_arrow_next_right_icon.png";
+import { fetchPosts } from "../../utils/fetchPosts";
+
+type Post = {
+  id: number;
+  title: string;
+  date: string;
+  author: string;
+  image: string;
+  firstParagraph: string;
+  quote: string;
+  secondParagraph: string;
+  tags: string[];
+  slug: string;
+};
 
 export default function Blog() {
   const [post, setPost] = useState<string>("");
-  const [filteredPosts, setFilteredPosts] = useState(PostData);
+  const [filteredPosts, setFilteredPosts] = useState<Post[]>([]);
+  const [posts, setPosts] = useState<Post[]>([]);
+
+  useEffect(() => {
+    const getPosts = async () => {
+      const fetchedPosts = await fetchPosts();
+      setPosts(fetchedPosts);
+      setFilteredPosts(fetchedPosts);
+    };
+
+    getPosts();
+  }, []);
 
   const searchPost = (query: string) => {
     if (query.trim() === "") {
-      setFilteredPosts(PostData);
+      setFilteredPosts(posts);
     } else {
-      const filtered = PostData.filter((p) =>
+      const filtered = posts.filter((p) =>
         p.title.toLowerCase().includes(query.toLowerCase())
       );
       setFilteredPosts(filtered);
@@ -24,6 +48,7 @@ export default function Blog() {
     setPost(query);
     searchPost(query);
   };
+
   return (
     <>
       <HeaderSection title="Blog" />
@@ -49,10 +74,10 @@ export default function Blog() {
               key={p.id}
               className="border border-white rounded-[4px] pb-5 md:w-[324px]"
             >
-              <img src={p.img} className="w-full h-[259px] object-cover" />
+              <img src={p.image} className="w-full h-[259px] object-cover" />
               <div className="flex justify-between items-center mt-3 text-[13px] px-[15px]">
-                <p>{p.date}</p>
-                <p>{p.Author}</p>
+                <p>{new Date(p.date).toLocaleDateString()}</p>
+                <p>{p.author}</p>
               </div>
               <div className="flex justify-center items-center mt-3 px-[15px] flex-col pb-5 gap-5">
                 <h3 className="font-semibold text-[16px]">{p.title}</h3>
