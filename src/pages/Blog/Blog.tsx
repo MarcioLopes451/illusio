@@ -79,7 +79,7 @@ export default function Blog() {
                 <p>{new Date(p.date).toLocaleDateString()}</p>
                 <p>{p.author}</p>
               </div>
-              <div className="flex justify-center items-center mt-3 px-[15px] flex-col pb-5 gap-5">
+              <div className="flex justify-center items-start mt-3 px-[15px] flex-col pb-5 gap-5">
                 <h3 className="font-semibold text-[16px]">{p.title}</h3>
                 <p className="text-[14px]">
                   {p.firstParagraph.slice(
