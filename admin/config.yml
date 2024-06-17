@@ -1,0 +1,30 @@
+backend:
+  name: git-gateway
+  branch: main # Branch to update (main by default)
+media_folder: "public/images/uploads" # Media files will be stored in the public/images/uploads directory
+public_folder: "/images/uploads" # URL to access uploaded media files
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "src/posts" # Folder where the blog posts will be stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "First Paragraph", name: "firstParagraph", widget: "markdown" }
+      - { label: "Quote", name: "quote", widget: "string" }
+      - {
+          label: "Second Paragraph",
+          name: "secondParagraph",
+          widget: "markdown",
+        }
+      - {
+          label: "Tags",
+          name: "tags",
+          widget: "list",
+          allow_add: true,
+          field: { label: "Tag", name: "tag", widget: "string" },
+        }
