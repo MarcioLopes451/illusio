@@ -11,7 +11,8 @@ firstParagraph: "Hello dear reader and welcome to the illusio blog! I'm so
   share my insights into the business - whether it’s a new discovery relating to
   the technology side, progression within the company or all the inspiring
   stories that will hopefully come from this journey.  "
-quote: --
+quote: Scientists Investigate that which already is; Engineers create that which
+  has never been - Albert Einstein
 secondParagraph: This week we have officially launched the website and
   illusio.co.uk is now up and running! Our next plan is to bring the magic of
   holograms to the vibrant street markets of London. Imagine stumbling upon a
