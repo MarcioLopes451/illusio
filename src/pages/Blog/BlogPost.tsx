@@ -76,7 +76,7 @@ export default function BlogPost() {
           <CircleArrowLeft onClick={handleBack} />
           <div className="flex flex-col justify-end items-end">
             <p>{new Date(postData.date).toLocaleDateString()}</p>
-            <p>{postData.author}</p>
+            <p>~ {postData.author}</p>
           </div>
         </div>
         <div className="mt-5 flex justify-center items-center flex-col gap-5">

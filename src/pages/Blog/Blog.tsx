@@ -68,16 +68,16 @@ export default function Blog() {
             placeholder="Search Here..."
           />
         </div>
-        <div className="mt-10 flex justify-center items-center flex-col flex-wrap md:items-start">
+        <div className="mt-10 flex justify-center items-center flex-col flex-wrap gap-5 md:items-start md:flex-row md:flex-wrap lg:justify-between">
           {filteredPosts.map((p) => (
             <div
               key={p.id}
-              className="border border-white rounded-[4px] pb-5 md:w-[324px]"
+              className="border border-white rounded-[4px] pb-5 md:w-[324px] lg:w-[350px] xl:w-[600px]"
             >
               <img src={p.image} className="w-full h-[259px] object-cover" />
               <div className="flex justify-between items-center mt-3 text-[13px] px-[15px]">
                 <p>{new Date(p.date).toLocaleDateString()}</p>
-                <p>{p.author}</p>
+                <p>~ {p.author}</p>
               </div>
               <div className="flex justify-center items-start mt-3 px-[15px] flex-col pb-5 gap-5">
                 <h3 className="font-semibold text-[16px]">{p.title}</h3>
@@ -86,7 +86,7 @@ export default function Blog() {
                     0,
                     p.firstParagraph.indexOf(
                       ".",
-                      p.firstParagraph.indexOf(".") * 7
+                      p.firstParagraph.indexOf(".") * 3
                     )
                   )}
                 </p>
