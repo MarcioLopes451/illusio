@@ -7,6 +7,7 @@ import Instagram from "../../images/1298747_instagram_brand_logo_social media_ic
 import X from "../../images/11244080_x_twitter_elon musk_twitter new logo_icon (1).png";
 import Facebook from "../../images/5282541_fb_social media_facebook_facebook logo_social network_icon.png";
 import Linkedin from "../../images/4747495_linked in_social media_networking_icon.png";
+import ReactMarkdown from "react-markdown";
 
 type Post = {
   id: number;
@@ -14,9 +15,9 @@ type Post = {
   date: string;
   author: string;
   image: string;
-  firstParagraph: string;
-  quote: string;
-  secondParagraph: string;
+  firstParagraph: string; // Assuming this is in markdown format
+  quote: string; // Assuming this is in markdown format
+  secondParagraph: string; // Assuming this is in markdown format
   tags: string[];
   slug: string;
 };
@@ -80,11 +81,11 @@ export default function BlogPost() {
           </div>
         </div>
         <div className="mt-5 flex justify-center items-center flex-col gap-5">
-          <p>{postData.firstParagraph}</p>
-          <p className="bg-white bg-opacity-[12%] rounded-md p-3 italic font-medium text-xl text-left">
-            {postData.quote}
-          </p>
-          <p>{postData.secondParagraph}</p>
+          <ReactMarkdown>{postData.firstParagraph}</ReactMarkdown>
+          <div className="bg-white bg-opacity-[12%] rounded-md p-3 italic font-medium text-xl text-left">
+            <ReactMarkdown>{postData.quote}</ReactMarkdown>
+          </div>
+          <ReactMarkdown>{postData.secondParagraph}</ReactMarkdown>
         </div>
         <div className="flex justify-center items-center flex-col gap-10 md:flex-row mt-10">
           <h2 className="flex font-medium">
