@@ -1,7 +1,7 @@
 ---
 title: "The Debut of the Hologram Tent: Our First Market Stall Experience"
 date: 2024-10-23T06:40:21.932Z
-author: Henrique fernandes
+author: Henrique Fernandes
 image: /images/uploads/img_6811.jpeg
 firstParagraph: >-
   This past weekend marked an exciting milestone for *Illusio*, as we officially
