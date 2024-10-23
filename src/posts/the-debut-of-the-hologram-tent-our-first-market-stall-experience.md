@@ -29,28 +29,17 @@ firstParagraph: >-
 quote: '"All our dreams can come true, if you have the courage to pursue them" -
   Walt Disney '
 secondParagraph: >-
-  Lessons Learned:
+  L﻿essons Learned: 
 
 
-  <!--\[if !supportLists]-->1.     <!--\[endif]--> **Improve Blackout Efficiency**\
-
-  Our tent didn’t block out enough light, which affected the quality of the holographic displays. For future events, we’ll need to improve the tent’s blackout capabilities by either modifying the materials or adding extra layers to create a darker environment inside.
 
 
-  <!--\[if !supportLists]-->2.     <!--\[endif]-->**Height Wasn't a Big Concern**\
-
-  We initially thought the TV supporting the plexiglass needed to be at eye level for optimal viewing, but this wasn't the case. The screen can be positioned lower, as long as it’s properly barricaded to block the viewer's line of sight to the edges of the screen. This flexibility opens up more possibilities for how we set up the tent in the future.
-
-
-  <!--\[if !supportLists]-->3.     <!--\[endif]-->**Setup Takes Longer Than Expected**\
-
-  We underestimated how long it would take to assemble the tent. We aimed to start by 11:00 AM but weren’t ready until 11:45. This lost us valuable time, especially with only a five-hour window. We’ll practice assembly beforehand to improve our efficiency and make sure we start on time.
-
-
-  <!--\[if !supportLists]-->4.     <!--\[endif]-->**Be ready to improvise!**\
-
-  On the day, things didn’t go exactly as planned—whether it was technical issues or needing to tweak our sales pitch. Being able to adapt quickly and keep going was critical, and this experience taught us the importance of staying flexible and finding creative solutions on the fly.
-
-
-  <!--EndFragment-->
+  * **Improve Blackout Efficiency**\
+    Our tent didn’t block out enough light, which affected the quality of the holographic displays. For future events, we’ll need to improve the tent’s blackout capabilities by either modifying the materials or adding extra layers to create a darker environment inside.
+  * **Height Wasn't a Big Concern** \
+    We initially thought the TV supporting the plexiglass needed to be at eye level for optimal viewing, but this wasn't the case. The screen can be positioned lower, as long as it’s properly barricaded to block the viewer's line of sight to the edges of the screen. This flexibility opens up more possibilities for how we set up the tent in the future.
+  * **Setup Takes Longer Than Expected**\
+    We underestimated how long it would take to assemble the tent. We aimed to start by 11:00 AM but weren’t ready until 11:45. This lost us valuable time, especially with only a five-hour window. We’ll practice assembly beforehand to improve our efficiency and make sure we start on time.
+  * **Be ready to improvise!**\
+    On the day, things didn’t go exactly as planned—whether it was technical issues or needing to tweak our sales pitch. Being able to adapt quickly and keep going was critical, and this experience taught us the importance of staying flexible and finding creative solutions on the fly.
 ---
