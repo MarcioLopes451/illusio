@@ -11,8 +11,7 @@ firstParagraph: >-
   warmly welcomed by the local traders and the head of the market, and soon
   enough, the sun broke through the clouds, setting the stage for an incredible
   day.
-
-
+   ﻿
   Our team arrived at the market an hour and a half early to ensure we had ample time to set up. Battling the downpour wasn’t easy, but the excitement in the air—both from us and the other stallholders—was undeniable. Rain or shine, the community was eager to share their creations, and we were ready to introduce something entirely new: an immersive holographic experience.
 
 
