@@ -3,6 +3,7 @@ import HeaderSection from "../../components/Header/HeaderSection";
 import { Link } from "react-router-dom";
 import RightArrow from "../../images/4829869_arrow_next_right_icon.png";
 import { fetchPosts } from "../../utils/fetchPosts";
+import ReactMarkdown from "react-markdown";
 
 type Post = {
   id: number;
@@ -81,7 +82,7 @@ export default function Blog() {
               </div>
               <div className="flex justify-center items-start mt-3 px-[15px] flex-col pb-5 gap-5">
                 <h3 className="font-semibold text-[16px]">{p.title}</h3>
-                <p className="text-[14px]">
+                <ReactMarkdown className="text-[14px]">
                   {p.firstParagraph.slice(
                     0,
                     p.firstParagraph.indexOf(
@@ -89,7 +90,7 @@ export default function Blog() {
                       p.firstParagraph.indexOf(".") * 3
                     )
                   )}
-                </p>
+                </ReactMarkdown>
               </div>
               <Link
                 to={`/blog/${p.id}`}

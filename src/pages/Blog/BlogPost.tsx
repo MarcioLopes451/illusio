@@ -15,9 +15,9 @@ type Post = {
   date: string;
   author: string;
   image: string;
-  firstParagraph: string; // Assuming this is in markdown format
-  quote: string; // Assuming this is in markdown format
-  secondParagraph: string; // Assuming this is in markdown format
+  firstParagraph: string;
+  quote: string;
+  secondParagraph: string;
   tags: string[];
   slug: string;
 };
