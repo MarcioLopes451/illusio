@@ -32,7 +32,7 @@ secondParagraph: >-
 
 
   1. **Improve Blackout Efficiency**\
-     Our tent didn’t block out enough light, which affected the quality of the holographic displays. For future events, we’ll need to improve the tent’s blackout capabilities by either modifying the materials or adding extra layers to create a darker environment inside.
+     Our tent didn’t block out enough light, which affected the quality of the holographic displays. For future events, we’ll need to improve the tent’s blackout capabilities by either modifying the materials or adding extra layers to create a darker environment inside. 
   2. **Height Wasn't a Big Concern** \
      We initially thought the TV supporting the plexiglass needed to be at eye level for optimal viewing, but this wasn't the case. The screen can be positioned lower, as long as it’s properly barricaded to block the viewer's line of sight to the edges of the screen. This flexibility opens up more possibilities for how we set up the tent in the future.
   3. **Setup Takes Longer Than Expected**\
