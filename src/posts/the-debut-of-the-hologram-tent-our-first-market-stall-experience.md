@@ -27,8 +27,9 @@ firstParagraph: >-
   Over the course of the next five hours, we stood proudly at our stall, greeting guests, sharing stories, and showcasing our vision. It wasn’t just about selling a product, but offering a moment of wonder—a new way of seeing the world, even if just for a few minutes inside our tent. By the end of the day, we felt a sense of accomplishment that far outweighed the challenges we’d faced earlier.
 quote: '"All our dreams can come true, if you have the courage to pursue them" -
   Walt Disney '
-secondParagraph: |-
+secondParagraph: >
   ### Lessons Learned:
+
 
   1. **Improve Blackout Efficiency**  
      Our tent didn’t block out enough light, which affected the quality of the holographic displays. For future events, we’ll need to improve the tent’s blackout capabilities by either modifying the materials or adding extra layers to create a darker environment inside.
