@@ -9,6 +9,7 @@ import Facebook from "../../images/5282541_fb_social media_facebook_facebook log
 import Linkedin from "../../images/4747495_linked in_social media_networking_icon.png";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
 
 type Post = {
   id: number;
@@ -90,7 +91,11 @@ export default function BlogPost() {
               {postData.quote}
             </ReactMarkdown>
           </div>
-          <ReactMarkdown remarkPlugins={[remarkGfm]} className="list-decimal">
+          <ReactMarkdown
+            remarkPlugins={[remarkGfm]}
+            className="list-decimal"
+            rehypePlugins={[rehypeRaw]}
+          >
             {postData.secondParagraph}
           </ReactMarkdown>
         </div>
