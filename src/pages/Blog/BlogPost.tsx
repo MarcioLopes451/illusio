@@ -8,6 +8,7 @@ import X from "../../images/11244080_x_twitter_elon musk_twitter new logo_icon (
 import Facebook from "../../images/5282541_fb_social media_facebook_facebook logo_social network_icon.png";
 import Linkedin from "../../images/4747495_linked in_social media_networking_icon.png";
 import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 type Post = {
   id: number;
@@ -81,11 +82,17 @@ export default function BlogPost() {
           </div>
         </div>
         <div className="mt-5 flex justify-center items-center flex-col gap-5">
-          <ReactMarkdown>{postData.firstParagraph}</ReactMarkdown>
+          <ReactMarkdown remarkPlugins={[remarkGfm]}>
+            {postData.firstParagraph}
+          </ReactMarkdown>
           <div className="bg-white bg-opacity-[12%] rounded-md p-3 italic font-medium text-xl text-left">
-            <ReactMarkdown>{postData.quote}</ReactMarkdown>
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>
+              {postData.quote}
+            </ReactMarkdown>
           </div>
-          <ReactMarkdown>{postData.secondParagraph}</ReactMarkdown>
+          <ReactMarkdown remarkPlugins={[remarkGfm]} className="list-decimal">
+            {postData.secondParagraph}
+          </ReactMarkdown>
         </div>
         <div className="flex justify-center items-center flex-col gap-10 md:flex-row mt-10">
           <h2 className="flex font-medium">
